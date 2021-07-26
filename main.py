@@ -38,7 +38,7 @@ def on_hit(sprite,othersprite):
     info.change_score_by(1)
 sprites.on_overlap(SpriteKind.projectile, SpriteKind.enemy, on_hit)
 def on_crash(sprite,othersprite):
-    othersprite
+    othersprite.destroy()
     info.change_life_by(-1)
-sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, 
-    on_hit)
+sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_crash
+)
